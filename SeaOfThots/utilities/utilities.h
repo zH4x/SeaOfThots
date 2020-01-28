@@ -5,7 +5,7 @@
 #include "memory/memory.hpp"
 #include "vector/vector.hpp"
 #include "../../SDK/include/SDK.hpp"
-#include <math.h>
+#include <cmath>
 #include <stdarg.h>  // For va_start, etc.
 #include <memory>    // For std::unique_ptr
 

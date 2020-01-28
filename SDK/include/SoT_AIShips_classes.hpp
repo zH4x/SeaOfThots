@@ -7,7 +7,6 @@
 #endif
 
 #include "SoT_AIShips_structs.hpp"
-#include "AthenaCommons.hpp"
 
 namespace SDK
 {
@@ -420,7 +419,7 @@ public:
 	class UBehaviorTree*                               BTAsset;                                                  // 0x0650(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0658(0x0018) MISSED OFFSET
 	class UStatusEffectManagerComponent*               StatusEffectManagerComponent;                             // 0x0670(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      AnchorDynamicsParams[0x28];                               // 0x0678(0x0028) (Edit)
+	struct FStandardAnchorDynamicsParameters           AnchorDynamicsParams;                                     // 0x0678(0x0028) (Edit)
 	unsigned char                                      UnknownData01[0x88];                                      // 0x06A0(0x0088) MISSED OFFSET
 
 	static UClass* StaticClass()

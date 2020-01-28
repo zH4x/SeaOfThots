@@ -462,26 +462,26 @@ public:
 
 // Class Watercrafts.RowingCompositeInputHandler
 // 0x0088 (0x01A8 - 0x0120)
-//class URowingCompositeInputHandler : public ULookAtOffsetCompositeInputHandler
-//{
-//public:
-//	unsigned char                                      UnknownData00[0x80];                                      // 0x0120(0x0080) MISSED OFFSET
-//	class ARowingSeat*                                 TargetOars;                                               // 0x01A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-//
-//	static UClass* StaticClass()
-//	{
-//		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Watercrafts.RowingCompositeInputHandler"));
-//		return ptr;
-//	}
-//
-//
-//	TEnumAsByte<EInputHandlerResult> OnUseRightOar();
-//	TEnumAsByte<EInputHandlerResult> OnUseLeftOar();
-//	TEnumAsByte<EInputHandlerResult> OnStopUseRightOar();
-//	TEnumAsByte<EInputHandlerResult> OnStopUseLeftOar();
-//	TEnumAsByte<EInputHandlerResult> OnBrakeRightOar();
-//	TEnumAsByte<EInputHandlerResult> OnBrakeLeftOar();
-//};
+class URowingCompositeInputHandler : public ULookAtOffsetCompositeInputHandler
+{
+public:
+	unsigned char                                      UnknownData00[0x80];                                      // 0x0120(0x0080) MISSED OFFSET
+	class ARowingSeat*                                 TargetOars;                                               // 0x01A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Watercrafts.RowingCompositeInputHandler"));
+		return ptr;
+	}
+
+
+	TEnumAsByte<EInputHandlerResult> OnUseRightOar();
+	TEnumAsByte<EInputHandlerResult> OnUseLeftOar();
+	TEnumAsByte<EInputHandlerResult> OnStopUseRightOar();
+	TEnumAsByte<EInputHandlerResult> OnStopUseLeftOar();
+	TEnumAsByte<EInputHandlerResult> OnBrakeRightOar();
+	TEnumAsByte<EInputHandlerResult> OnBrakeLeftOar();
+};
 
 
 // Class Watercrafts.WatercraftBlueprintFunctionLibrary

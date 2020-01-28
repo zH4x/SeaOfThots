@@ -354,14 +354,6 @@ struct FAIFormVarietyEntry
 	TArray<struct FAIIndividualVarietyEntry>           Individuals;                                              // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
-// ScriptStruct AthenaAI.TargetSkillsetProgressionPair
-// 0x0020
-//struct FTargetSkillsetProgressionPair
-//{
-//	struct FStringAssetReference                       CrewSkillset;                                             // 0x0000(0x0010) (Edit, ZeroConstructor)
-//	struct FStringAssetReference                       CaptainSkillset;                                          // 0x0010(0x0010) (Edit, ZeroConstructor)
-//};
-
 // ScriptStruct AthenaAI.TargetItemDropProgressionPair
 // 0x0020
 struct FTargetItemDropProgressionPair
@@ -1148,15 +1140,15 @@ struct FBountySpawnerNewWaveGroupSpawnedEvent
 
 // ScriptStruct AthenaAI.BountySpawnerAudioChangedNetworkEvent
 // 0x0018 (0x0028 - 0x0010)
-//struct FBountySpawnerAudioChangedNetworkEvent : public FNetworkEventStruct
-//{
-//	TEnumAsByte<EBountySpawnerAudioState>              AudioState;                                               // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-//	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-//	float                                              Intensity;                                                // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
-//	TEnumAsByte<EBountySpawnerType>                    BountyType;                                               // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
-//	unsigned char                                      UnknownData01[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
-//	struct FVector                                     BountyPosition;                                           // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
-//};
+struct FBountySpawnerAudioChangedNetworkEvent : public FNetworkEventStruct
+{
+	TEnumAsByte<EBountySpawnerAudioState>              AudioState;                                               // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	float                                              Intensity;                                                // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EBountySpawnerType>                    BountyType;                                               // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
+	struct FVector                                     BountyPosition;                                           // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
+};
 
 // ScriptStruct AthenaAI.EventAIBountySpawnerAllTargetsKilled
 // 0x0018
@@ -1312,17 +1304,17 @@ struct FTinySharkEQSRequest
 
 // ScriptStruct AthenaAI.TinySharkSpawnedNetworkEvent
 // 0x0000 (0x0010 - 0x0010)
-//struct FTinySharkSpawnedNetworkEvent : public FNetworkEventStruct
-//{
-//
-//};
+struct FTinySharkSpawnedNetworkEvent : public FNetworkEventStruct
+{
+
+};
 
 // ScriptStruct AthenaAI.TinySharkKilledNetworkEvent
 // 0x0000 (0x0010 - 0x0010)
-//struct FTinySharkKilledNetworkEvent : public FNetworkEventStruct
-//{
-//
-//};
+struct FTinySharkKilledNetworkEvent : public FNetworkEventStruct
+{
+
+};
 
 // ScriptStruct AthenaAI.EventTinySharkKilled
 // 0x0001
